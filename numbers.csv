@@ -1,0 +1,22 @@
+using System;
+using System.IO;
+using System.Text;
+
+namespace numbers
+{
+      class Program
+      {
+          static void Main(string[] args)
+        {
+            StreamWriter writer = new StreamWriter("C:\\numbers.csv");
+            {
+      Random rnd = new Random();
+      for (int i = 1; i < 101; i++)
+      {
+				writer.Write(rnd.Next(1, 101) + ", ");
+			}
+			writer.Close();
+}
+    }
+  }
+}

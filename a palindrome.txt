@@ -1,0 +1,22 @@
+using System;
+using System.Text.RegularExpressions;
+public class Palindrom
+{
+    public static string Reverser(string a)
+    {
+            a = System.Text.RegularExpressions.Regex.Replace(a, @"[\.!,\a:;?]", "");
+        Console.WriteLine(a.ToLower());
+        char[] arr = a.ToCharArray();
+        Array.Reverse(arr);
+        return new string(arr);
+    }
+    public static string palindrome(string x)
+    {
+        string z = Reverser(x);
+        Console.WriteLine(z);
+        if (Equals(x, z))
+            return "a palindrome";
+        else
+            return "not a palindrome";
+    }
+}
